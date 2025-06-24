@@ -1,0 +1,132 @@
+// 실습문제1번
+<!DOCTYPE html> 실습문제1번
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+	        width: 278px;
+	        height: 160px;
+            background: #ffb9b9;
+            /* margin-top: 16px;
+            margin-left: 16px; */
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+      
+// 실습문제2번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+	        width: 160px;
+	        height: 278px;
+            background: #ffb9b9;
+            /* margin-top: 16px;
+            margin-left: 16px; */
+    
+    }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>
+      
+// 실습문제 3번   
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+	        width: 160px;
+	        height: 160px;
+            background: #ffb9b9;
+            /* margin-top: 16px;
+            margin-left: 16px; */
+            border-radius: 9999px;
+    }
+    </style>
+</head>
+<body>
+    <div ></div>
+</body>
+</html>
+      
+// 실습문제4번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .radius {
+	        width: 278px;
+	        height: 160px;
+            background: #CA785C;
+            margin-top: 16px;
+            margin-left: 16px;
+            border-radius: 8px;
+    }
+    #t1 {
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: 0%;
+        margin-left: 16px;
+    }
+    </style>
+</head>
+<body>
+    <div class="radius"></div>
+    <p id="t1">안녕하세요!</p>
+</body>
+</html>
+      
+// 실습문제 5번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5번</title>
+    <style>
+        .radius {
+	        width: 180px;
+	        height: 278px;
+            background: #CA785C;
+            margin-top: 16px;
+            margin-left: 16px;
+            border-radius: 16px;
+    }
+    #t1 {
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 100%;
+        letter-spacing: -0.5%;
+        border-width: 79px;
+        border-top: 302px;
+        margin-left: 16px;
+        color: #138a79;
+    }
+    </style>
+</head>
+<body>
+    <div class="radius"></div>
+    <p id="t1">반갑습니다!</p>
+</body>
+</html>
