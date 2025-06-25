@@ -1,0 +1,308 @@
+//1번(1)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃1</title>
+    <style>
+        header {
+            background: blue;
+            width: 600px;
+            height: 50px;
+        }
+        nav {
+            background: red;
+            width:100px;
+            height: 300px;
+        }
+        section {
+            background: green;
+            width: 400px;
+            height: 300px;
+            margin: 100px;
+            margin-top: -300px;
+        }
+        #art1 {
+            background: yellowgreen;
+            width: 360px;
+            height: 90px;
+            margin-left: 120px;
+            margin-top: -375px;
+        }
+        #art2 {
+            background: pink;
+            width: 360px;
+            height: 90px;
+            margin-left: 120px;
+        }
+        #art3 {
+            background: cyan;
+            width: 360px;
+            height: 90px;
+            margin-left: 120px;
+        }
+        aside {
+            background: whitesmoke;
+            width: 100px;
+            height: 300px;
+            /* float: right; */
+            margin-left: 500px;
+            margin-top: -295px;
+        }
+        footer {
+            background: purple;
+            width: 600px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>페이지 레이아웃 설정</h1>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <article id="art1">article</article>
+    <article id="art2">article</article>
+    <article id="art3">article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+</body>
+</html>
+//1번(2)
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<title>페이지 레이아웃 설정</title>
+<style>
+* {
+box-sizing: border-box;
+margin: 0;
+padding: 0;
+}
+
+header {
+  background-color: blue;
+  height: 60px;
+}
+
+nav {
+  background-color: red;
+  width: 100px;
+  float: left;
+  height: 400px;
+}
+
+aside {
+  background-color: #f5f5dc;
+  width: 100px;
+  float: right;
+  height: 400px;
+}
+
+section {
+  background-color: darkgreen;
+  margin: 0 100px 0 100px;
+  padding: 20px;
+  height: 400px;
+}
+
+section article:nth-child(1) {
+  background-color: yellowgreen;
+  height: 90px;
+  /* margin-bottom: 10px; */
+}
+
+section article:nth-child(2) {
+  background-color: pink;
+  height: 90px;
+  /* margin-bottom: 10px; */
+}
+
+section article:nth-child(3){
+  background-color: cyan;
+  height: 90px;
+}
+
+footer {
+  background-color: purple;
+  height: 40px;
+}
+
+</style>
+</head>
+<body>
+    <h1>페이지 레이아웃 설정</h1>
+    <br>
+<header>header</header>
+
+<nav>nav</nav>
+
+<aside>aside</aside>
+
+<section>section
+<article>article</article>
+<article>article</article>
+<article>article</article>
+</section>
+
+<footer>footer</footer>
+</body>
+</html>
+//2번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃2</title>
+    <style>
+        header {
+            background: blue;
+            width: 600px;
+            height: 60px;
+        }
+        nav {
+            background: red;
+            width: 500px;
+            height: 25px;
+            margin-left: 50px;
+            /* margin: 0 auto; */
+            /* padding-left: 10px; */
+            margin-top: -25px;
+        }
+
+        section {
+            background: green;
+            width: 500px;
+            height: 300px;
+        }
+
+        #art1 {
+            background: yellowgreen;
+            width: 360px;
+            height: 90px;
+            margin-left: 70px;
+            margin-top: -280px;
+        }
+        #art2 {
+            background: pink;
+            width: 360px;
+            height: 90px;
+            margin-left: 70px;
+        }
+        #art3 {
+            background: cyan;
+            width: 360px;
+            height: 90px;
+            margin-left: 70px;
+        }
+        aside {
+            background: #f5f5dc;
+            width: 100px;
+            height: 300px;
+            margin-left: 500px;
+            margin-top: -290px;
+        }
+        footer {
+            background: purple;
+            width: 600px;
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>페이지 레이아웃 설정</h1>
+    <br>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <article id="art1">article</article>
+    <article id="art2">article</article>
+    <article id="art3">article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+</body>
+</html>
+//3번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃3</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        h1 {
+            width: 600px;
+        }
+        header {
+            background: blue;
+            width: 600px;
+            height: 60px;
+        }
+        nav {
+            background: red;
+            width: 500px;
+            height: 25px;
+            margin-left: 50px;
+            margin-top: -25px;
+        }
+
+        section {
+            background: green;
+            width: 500px;
+            height: 300px;
+            
+        }
+
+        #art1 {
+            background: yellowgreen;
+            width: 360px;
+            height: 90px;
+            margin-left: 70px;
+            margin-top: -275px;
+        }
+        #art2 {
+            background: pink;
+            width: 360px;
+            height: 90px;
+            margin-left: 70px;
+        }
+        #art3 {
+            background: cyan;
+            width: 360px;
+            height: 90px;
+            margin-left: 70px;
+        }
+        aside {
+            background: #f5f5dc;
+            width: 100px;
+            height: 300px;
+            margin-left: 500px;
+            margin-top: -295px;
+        }
+        footer {
+            background: purple;
+            width: 600px;
+            
+        }
+    </style>
+    
+</head>
+<body>
+    <h1>페이지 레이아웃 설정</h1>
+    <br>
+    <header>header</header>
+    <nav>nav</nav>
+    <section>section</section>
+    <article id="art1">article</article>
+    <article id="art2">article</article>
+    <article id="art3">article</article>
+    <aside>aside</aside>
+    <footer>footer</footer>
+</body>
+</html>
