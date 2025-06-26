@@ -1,0 +1,212 @@
+// 실습문제 11번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 11</title>
+    <style>
+        #bg-img {
+            width:320px;
+            height:320px;
+            background-image: url("/sample/image/exam11.png");
+            color: white;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body> 
+    <div id="bg-img">인테리어 디자인</div>
+    <!-- <p>인테리어 디자인</p>  -->
+    <!-- 텍스트를 넣어보기 -->
+    
+</body>
+</html>
+// 실습문제 12번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 12</title>
+    <style>
+        #bg-img {
+            width:320px;
+            height:320px;
+            background-image: url("/sample/image/exam11.png");
+            color: white;
+        }
+        .radius {
+	        width: 32px;
+	        height: 32px;
+            background: #92f8ff;
+            margin-top: 16px;
+            margin-left: 16px;
+            border-radius: 9999px;
+            margin-top: -58px;
+         }
+         .radius2 {
+	        width: 32px;
+	        height: 32px;
+            background: #ff9292;
+            margin-top: -32px;
+            margin-left: 272px;
+            border-radius: 9999px;
+         }
+         .radius3 {
+	        width: 32px;
+	        height: 32px;
+            background: #e3ff92;
+            margin-top: -272px;
+            margin-left: 272px;
+            border-radius: 9999px;
+         }
+    </style>
+</head>
+<body> 
+    <div id="bg-img">인테리어 디자인</div>
+    <div class="radius"></div>
+    <div class="radius2"></div>
+    <div class="radius3"></div>
+</body>
+</html>
+// 실습문제 13번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 13</title>
+    <style>
+        .square {
+	        width: 250px;
+	        height: 150px;
+            background: #ffb9b9;
+            border-top-left-radius: 8px;
+            border-top-right-radius: 8px;
+        }
+        .text {
+            width: 250px;
+            height: 75px;
+            border-color: #ffb9b9;
+            border-style: dashed;
+            
+        }
+        .radius {
+	        width: 24px;
+	        height: 24px;
+            background: #d9d9d9;
+            border-radius: 9999px;
+            margin-top: -40px;
+            margin-left: 10px;
+         }
+         .text2 {
+            width: 250px;
+            height: 75px;
+            margin-top: -25px;
+            margin-left: 45px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="square"></div>
+    <div class="text">안녕하세요. 텍스트입니다.</div>
+    <div class="radius"></div>
+    <div class="text2">휴양죠</div>
+</body>
+</html>
+// 실습문제 14번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 14</title>
+    <style>
+        .sq {
+            width: 120px;
+            height: 170px;
+            border-radius: 8px;
+            background: #ffb9b9;
+            margin-top: 16px;
+            margin-left: 16px;
+        }
+        .te {
+            width: 104px;
+            height: 30px;
+            margin-top: 24px;
+            margin-left: 24px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 100%;
+        }
+        .radius {
+	        width: 24px;
+	        height: 24px;
+            background: #d9d9d9;
+            border-radius: 9999px;
+            margin-top: -90px;
+            margin-left: 100px;
+         }
+    </style>
+
+</head>
+<body>
+    <div class="sq"></div>
+    <div class="te">나른한 점심시간, 밖에서 밥먹기</div>
+    <div class="radius"></div>
+</body>
+</html>
+// 실습문제 15번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 15</title>
+    <style>
+        .id {
+            width: 45px;
+            height: 19px;
+        }
+        .rec {
+            width: 278px;
+            height: 40px;
+            border: 1px;
+            border-color:gray;
+            border-radius: 8px;
+        }
+        .pwd {
+            width: 59px;
+            height: 19px;
+        }
+        .rec2 {
+            width: 278px;
+            height: 40px;
+            background: gray;
+            border-radius: 8px;
+        }
+        .rec3 {
+            width: 278px;
+            height: 48px;
+            background: #17b75e;
+            color: white;
+            font-size: 20px;
+            text-align: center;
+            align-content: center;
+            font: bold;
+            border-radius: 8px;
+            margin-top: 26px;
+        }
+    </style>
+</head>
+<body>
+    <h1>로그인</h1>
+    <p class="id">아이디</p>
+    <div class="rec"></div>
+    <p class="pwd">비밀번호</p>
+    <div class="rec2"></div>
+    <div class="rec3">로그인</div>
+</body>
+</html>
