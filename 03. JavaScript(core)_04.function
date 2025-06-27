@@ -1,0 +1,255 @@
+## 1.  함수 정의(function definition)
+
+### 1) function declaration(함수 선언문)
+
+```jsx
+function hello(name) {
+    return `${name}님 안녕하세요.`;
+}
+
+console.log(hello('홍길동')); //홍길동님 안녕하세요.
+```
+
+함수의 이름을 생략할 수x → 함수명 hello 써줌
+
+### 2) function expression(함수 표현식)
+
+```jsx
+var hello =  function (name) { // 함수이름생략가능
+    return `${name}님 안녕하세요!`;
+}
+
+console.log(hello('홍길동')); //홍길동님 안녕하세요!
+
+// 함수 표현식에서 함수명을 생략하지 않아도 문제x
+var calc = function add(a, b) {
+    return a + b;
+}
+
+// 단, 함수 호출은 식별자로 이루어진다. 함수명 add가 아닌 식별자명 calc
+console.log(calc(10, 20)); //30
+// console.log(add(10, 20)); <- add is not defined
+```
+
+### 3) function hoistiong(함수 호이스팅)
+
+```jsx
+console.log(hello); //[Function : hello]
+console.log(hi);    // undefined
+
+function hello(name) {
+    return `${name}님 안녕하세요!`;
+}
+
+var hi = function(name) {
+    return `${name}님 안녕!`;
+}
+```
+
+함수 선언문은 런타임 이전 자바스크립트 엔진에 의해 먼저 실행됨
+
+따라서 함수 선언문 이전에 함수를 참조할 수 있으며 호출할 수도 있음
+
+함수 선언문이 코드의 선두로 끌어 올려진 것처럼 동작하는 자바스크립트 고유의 특징을
+
+함수 호이스팅이라고 함!
+
+변수 할당문의 값이 할당문이 실행되는 시점,
+
+런타임에 평가되므로 함수 표현식의 함수 리터럴도 할당문이 실행되는 시점에 평가되어 함수가 됨
+
+함수 표현식으로 정의한 함수는 반드시 함수 표현식 이후에 참조 또는 호출해야함
+
+## 2. 함수 호출(function call)
+
+### 1) 매개변수와 인수(parameter and arguments)
+
+```jsx
+function hello(name) {
+
+    // 매개변수는 함수 몸체 내부에서만 참조할 수 있다.
+    console.log(name);
+
+    return `${name}님 안녕하세요!`;
+}
+
+// console.log(name); 불가능
+
+// 함수 호출
+var result = hello('홍길동');
+console.log(result);
+
+// 인수가 부족해서 할당되지 않은 매개변수의 값은 undefinied이다.
+result = hello();
+console.log(result);
+
+// 인수가 더 많ㅇ느 경우 초과된 인수는 무시딘다,.
+result = hello('홍길동', '유관순');
+console.log(result);
+
+function hi(name = '이름') {
+    return `${name} 안녕`;
+}
+
+// 매개변수 기본값 활용
+result = hi();
+console.log(result);
+```
+
+### 2) return 반환문
+
+```jsx
+function hello(name) {
+
+    
+    return `${name}님 안녕하세요!`; // <-반환문
+    console.log(name); //반환문 이후의 문은 실행되지 않고 무시됨
+}
+
+// 반환문은 리턴 키워드 뒤에 오는 값을 반환
+console.log(hello('유관순')); //유관순님 안녕하세요!
+
+function test() {
+
+    console.log('함수 호출 확인');
+    // 반환 값을 명시적으로 지정하지 않으면 undefined가 반환된다.
+    return;
+    // 또는 반환문을 생략할 수도 있다. 이때도 암묵적으로 undefined를 반환함
+}
+console.log(test()); //undefined
+```
+
+## 3. 화살표 함수(arrow function)
+
+```jsx
+var message;
+
+// 기본 함수 정의
+message = function() {
+    return 'hello world';
+}
+
+console.log(message()); //hello world
+
+// function 생략
+message = () => {
+    return 'Arrow Function!';
+}
+
+// 명령문이 하나만 있을 경우 중괄호, return 생략 가능
+message = () => "Arrow Function!";
+
+console.log(message()); //Arrow Function!
+
+// 매개변수 있는 경우
+message = (val1, val2) => `Arrow function : ${val1 + val2}`;
+
+console.log(message(10, 20)); //Arrow Function : 30
+
+// 매개변수가 하나면 소괄호 생략 가능
+message = value => `hello${value}`;
+
+console.log(message('world')); //helloworld
+```
+
+## 4. 다양한 타입의 함수(various type of functions)
+
+### 1) 즉시 실행 함수
+
+일반적으로 함수 이름이 없는 익명 함수를 사용, 전체 소괄호로 묶음
+
+```jsx
+(function() {
+    console.log('익명 즉시 실행 함수, 함수 정의와 동시에 호출!'); 
+    //익명 즉시 실행 함수, 함수 정의와 동시에 호출!
+})();
+
+(function hello(name) {
+    console.log(`${name}님 안녕하세요`); //홍길동님 안녕하세요
+})('홍길동');
+
+// hello('홍길동');
+// -> 함수 이름으로 작성할 수도 있지만 해당 이름으로 다시 호출할 수 없다.
+```
+
+### 2) 재귀 함수
+
+: 함수가 자기 자신을 호출하는 것, 반복되는 처리를 위해 사용
+
+- 팩토리얼(!)
+    
+    5! = 1 * 2 * 3 * 4 * 5
+    
+    n! = 1 * 2 * 3 * 4 * (n-1) * n
+    
+
+```jsx
+function factorial(n) {    
+    
+	if(n <= 1)      // n이 1 이하일 때 재귀 호출을 멈춘다.
+        return 1;   // 재귀 호출
+
+	return n * factorial(n - 1);
+}
+
+console.log(factorial(1)); //1
+console.log(factorial(2)); //2
+console.log(factorial(3)); //6
+console.log(factorial(4)); //24
+console.log(factorial(5)); //120
+```
+
+무한 반복에 빠질 위험이 있고 이로 인해 스택 오버플로 에러가 발생할 수 있어 주의
+
+반복문보다 재귀 함수 사용이 더 직관적으로 이해하기 쉬울 때만 한정적 사용하는 게 바람직
+
+### 3) 중첩 함수
+
+: 함수 내부에 정의 된 함수, 내부 함수라고도 함
+
+중첩 함수를 포함하는 함수는 외부 함수
+
+```jsx
+function outer() {    
+	var outerVal = '외부 함수';  
+
+    function inner() {        
+
+	    var innerVal = '내부 함수';
+        // 외부 함수의 변수를 참조할 수 있다.        
+	    console.log(innerVal, outerVal); //내부 함수 외부 함수    
+		}    
+		inner();
+}
+outer();
+
+// inner();
+```
+
+### 4) 콜백 함수
+
+: 함수의 매개변수를 통해 다른 함수의 내부로 전달되는 함수
+
+- 고차 함수 : 매개 변수를 통해 함수의 외부에서 콜백 함수를 전달 받은 함수
+    
+    콜백 함수는 고차 함수에 전달 되어 헬퍼 함수의 역할을 함
+    
+// 전달 받은 값을 증가 시켜주는 함수
+function increase (value) {    
+	return value + 1;
+}
+// 전달 받은 값을 감소 시켜주는 함수
+function decrease (value) {    
+	return value - 1;
+}
+// 전달 받은 함수에 전달 받은 값을 적용 시켜주는 고차 함수
+function apply(func, value) {    
+// 고차 함수는 매개변수를 통해 전달 받을 콜백 함수의 호출 시점을 결정해서 호출  
+// 콜백 함수는 고차 함수에 의해 호출되며 이때 고차 함수는 필요에 따라 콜백함수에 인수를 전달할 수 있음    
+	return func(value);
+}
+// 고차 함수로 콜백 함수를 전달하며 호출
+console.log(apply(increase, 5)); //6
+console.log(apply(decrease, 5)); //4
+
+console.log(apply(function(value) {return value **2;}, 5)); //25    
