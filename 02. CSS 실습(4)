@@ -1,0 +1,227 @@
+// 실습문제 16번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 16</title>
+    <style>
+        form{
+            width: 336px;
+            height: 148px;
+            border-color: #c3c3c3;
+            border-style: solid;
+            border-radius: 8px;
+            
+            
+        }
+        .tx1{
+            font-size: 16px;
+            margin-top: 30px;
+            margin-left: 25px;
+    
+        }
+        #ln{
+            width: 278px;
+            height: 40px;
+            background: #17B75E;
+            color: white;
+            border-radius: 8px;
+            border: #17B75E;
+            margin-top: -10px;
+            margin-left: 25px;
+            font-size: 24px;
+            /* line-height: 100%; */
+            font-weight: 700;
+            
+        }
+        div {
+            width: 336px;
+            height: 148px;
+            font-size: 14px;
+            display: inline-block;
+            margin-left: 35px;
+
+        }
+        span{
+            color: #C3c3c3;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <p class="tx1">사이트를 더 안전하고 편리하게 이용하세요.</p>
+        <input type="submit" id="ln" value="로그인">
+        <div> 아이디 찾기 <span>|</span> 비밀번호 찾기 <span>|</span> 회원가입</div>
+    </form>
+</body>
+</html>
+// 실습문제 17번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 17</title>
+    <style>
+        .bg-img {
+            width: 300px;
+            height: 250px;
+            border-radius: 8px;
+            background-image: url("/sample/image/17.jpg");
+            background-size: cover;
+            background-position: center;
+            /* color: black;  */
+        }
+        .radius {
+	        width: 24px;
+	        height: 24px;
+            background: #d9d9d9;
+            border-radius: 9999px;
+            margin-top: -235px;
+            margin-left: 260px;
+         }
+        .tx {
+            width: 300px;
+            height: 56px;
+            background: rgba(0, 0, 0, 60%);
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            margin-top: -68px;
+        }
+
+        .tx1 {
+            font-size: 12px;
+            font-weight: 700;
+            color: white;
+            margin-left: 10px;
+            padding-top: 5px;
+
+        }
+        .tx2 {
+            font-size: 12px;
+            font-weight: 700;
+            color: #d1d1d1;
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-img"></div>
+    <div class="tx">
+        <p class="tx1">새로운 시작!</p>
+        <p class="tx2">김작가</p>
+    </div>
+    <div class="radius"></div>
+</body>
+</html>
+// 실습문제 18번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 18</title>
+    <style>
+        .rec {
+            width: 332px;
+            height: 100px;
+            border-radius: 8px;
+            background: #ffe4e4;
+        }
+        .rec2 {
+            width: 160px;
+            height: 100px;
+            border-radius: 8px;
+            background: #ffb9b9;
+            margin-top: -100px;
+        }
+        .square {
+	        width: 96px;
+	        height: 19px;
+            background: #ffb9b9;
+            border-radius: 2px;
+            color: white;
+            margin-left: 170px;
+            text-align: center;
+            font-size: 12px;
+            margin-top: -90px;
+        }
+        .rec3 {
+            width: 123px;
+            height: 19px;
+            font-size: 14px;
+            color: black;
+            margin-left: 170px;
+            margin-top: 10px;
+            
+        }
+        .rec4 {
+            width: 113px;
+            height: 17px;
+            font-size: 14px;
+            color: #8b8b8b;
+            margin-left: 170px;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rec"></div>
+    <div class="rec2"></div>
+    <div class="square">반가워요!</div>
+    <div class="rec3">좋은하루보내세요!</div>
+    <div class="rec4">날씨가 좋네요!</div>
+</body>
+</html>
+// 실습문제 19번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 19</title>
+    <style>
+        .rec {
+            width: 297px;
+            height: 35px;
+            background: #ffb9b9;
+        }
+        span {
+            font-size: 16px;
+            color: #ffffff;
+            float: both;
+            font-weight: 700;
+            line-height: 200%;
+            margin-left: 20px;
+            
+        }
+        .sp1 {
+            width: 4px;
+            height: 4px;
+            background: #d9d9d9;
+            margin-top: -20px;
+            margin-left: 80px;
+            border-radius: 9999px;
+        }
+        .sp2 {
+            width: 4px;
+            height: 4px;
+            background: #d9d9d9;
+            margin-top: -5px;
+            margin-left: 185px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rec" >
+        <span class="tx">웹툰홈</span>
+        <span class="tx">요일별웹툰</span>
+        <span class="tx">베스트도전</span>
+    </div>
+    <div class="sp1"></div>
+    <div class="sp2"></div>
+
+</body>
+</html>
