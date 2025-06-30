@@ -1,0 +1,96 @@
+## 1. 상속 (inheritance)
+
+항상 모든 객체는 object에서 상속 받고 있음
+
+### 1) [[Property]]
+
+자바스크립트의 객체는 [[Property]]이라는 숨김 프로퍼티를 가짐
+
+프로퍼티 값은 null or 다른 객체에 대한 참조 ( 이 경우엔 참조 대상 : 프로토타입)
+
+```jsx
+const user = {
+    activate : true,
+    login : function() {
+        console.log('로그인 되었습니다.');
+    }
+};
+
+const student = {
+
+    passion : true
+};
+
+student.__proto__ = user; // 유저의 프로퍼티에 접근하여 스튜던트가 사용가능
+console.log(student.activate); // 부모가가지고잇는프로퍼티도사용할수잇어서true가나옴
+student.login();
+```
+
+- 프로토타입 체인
+
+```jsx
+const greedyStudent = {
+    class : 11,
+    __proto__ : student // 키 밸류로도 사용가능
+};
+
+console.log(greedyStudent.activate); // user에서 상속
+console.log(greedyStudent.passion); // student에셔ㅓ 상속
+// 체인으로 연결되어 student와 user 둘 다 상속 받고잇음
+// 단, user가 greedyStudent 상속을 받는 순환참조식으로는 만들면안됨
+
+// 프로토타입 체이닝은 순환참조가 허용되지 않는다.
+```
+
+### 2)  property feature
+
+```jsx
+const user = {
+    id : 'user',
+    login : function (){
+        console.log(`${this.id}님 로그인 되었습니다.`);
+    }
+}
+
+const student = {
+    __proto__ : user
+};
+
+student.id = 'user01'; // student가 user를 상속받게되므로 id라는프로퍼티를 갖게되고 거기에user01을 할당
+student.login();
+
+for(let prop in student) {
+    console.log(prop);
+
+    let isOwn = student.hasOwnProperty(prop);
+
+    if(isOwn) {
+        console.log(`객체 자신의 프로퍼티 ${prop}`);
+
+    }
+    else {
+        console.log(`상속 프로퍼티 ${prop}`);
+    }
+}
+```
+
+## 2. 함수 프로토타입(function prototype)
+
+### 1) 생성자 함수 프로토타입(object constructor prototype)
+
+const user = {
+    activate : true,
+    login : function() {
+        console.log('로그인 되었습니다.');
+    }
+};
+
+function Student(name) {
+    this.name = name; // 지역변수로 초기화해줌
+}
+
+// student.__proto__ == user;
+Student.prototype = user; // <- 생성자함수에서는 __proto__ 대신 사용
+
+const student = new Student('홍길동');
+console.log(student.activate); //true
