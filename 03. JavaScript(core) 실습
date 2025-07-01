@@ -1,0 +1,95 @@
+// 1 논리 연산자
+
+let num=2
+if(num%2==0) {
+    console.log('짝수입니다.');
+}
+else {
+    console.log('홀수입니다.');
+}
+
+
+// 2 객체 리터럴
+var person = {
+    firstName :'GilDong',
+	lastName : 'Hong',    
+	age : 20
+};
+
+for (var key in person) {
+    console.log(`key : ${key}`);    
+	console.log(`person[key] : ${person[key]}`);
+}
+
+// 3 함수 표현식
+var calc = function add(a, b) {
+    return a + b;
+}
+console.log(calc(1, 2));
+
+// 4 화살표 함수
+var message;
+message = function greet() { 
+    return "Hello!";
+}
+message = () => "Arrow Function" // 명령문이 하나만 있는 경우라 중괄호, return 생략함
+console.log(message());
+
+var message2;
+message2 = function getInfo(name, age) {
+    return `name: ${name}, age: ${age}`;
+}
+
+message2 = (name, age) => `Arrow function name: ${name}, age: ${age}`;
+console.log(message2('name', 'age'));
+
+// 5 생성자 함수
+
+function Person(name, age){
+    this.name = name;
+    this.age = age;
+    this.sayHello = function() {
+        console.log('안녕하세요, 제 이름은 ' + this.name + ' 이고 나이는 ' + this.age +'세입니다.');
+    };
+}
+const person2 = new Person("홍길동", 20);
+person2.sayHello();
+
+// 6 프로퍼티 값 추가, 변경, 삭제
+const user = {
+   name : "koala",
+   age : 20
+};
+
+user.email = "koala.ohgiraffers@gmail.com" ;
+user.age = 21;
+delete user.name;
+
+console.log(user);
+
+
+// 7 상속 프로퍼티
+
+const car = {
+    brand : 'kia'
+};
+
+const fireCar = {
+    color : 'red'
+};
+
+fireCar.__proto__ == car;
+
+for(let prop in fireCar) {
+    console.log(prop);
+
+    let isOwn = fireCar.hasOwnProperty(prop);
+
+    if(isOwn) {
+        console.log(`객체 자신의 프로퍼티 ${prop}`);
+
+    }
+    else {
+        console.log(`상속 프로퍼티 ${prop}`);
+    }
+}
