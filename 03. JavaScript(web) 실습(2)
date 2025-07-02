@@ -1,0 +1,64 @@
+// 3번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="hobby">
+        <li>야구</li>
+    </ul>
+    <script>
+
+        const $hobby = document.getElementById('hobby');
+        // id가 hobby인 요소를 가져옴
+        const $container = document.createElement('div');
+        // div라는 요소를 생성
+        ['축구', '농구', '수영'].forEach(text => {
+            const $li = document.createElement('li');
+            $li.textContent = text; 
+
+        
+            $container.append($li); //div에 li를 추가함
+        });
+        
+        
+        $hobby.appendChild($container); //ul안에 div가 들어감
+    </script>
+</body>
+</html>
+
+// 4번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="nickname">닉네임</label>
+    <input type="text" id="nickname" value="JSMaster">
+
+    <script>
+        const $nickname = document.getElementById('nickname');
+        // id=nickname인 요소를 가져옴
+
+        console.log($nickname.hasAttribute('name'));
+        // name 속성이 있는지 html 확인
+        console.log($nickname.hasAttribute('value'));
+        // value 속성이 있는지 html 확인
+        if($nickname.hasAttribute('value')) {
+    
+            $nickname.removeAttribute('value');
+        }
+        // value속성이 존재하면 removeattiribute()로 제거
+
+        console.log($nickname.hasAttribute('value'));
+
+        // 삭제하고 다시 체크
+    </script>
+</body>
+</html>
