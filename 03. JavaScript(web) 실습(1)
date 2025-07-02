@@ -1,0 +1,56 @@
+// 1번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="drink">
+        <li>커피</li>
+    </ul>
+
+    <script>
+
+        const $drink = document.getElementById('drink');
+            // id가 drink인 요소를 가져옴
+        const $li = document.createElement('li');
+            // 요소 노드를 생성함
+        console.log($li);
+        
+        //  const $textNode = document.createTextNode('콜라');
+
+        //  $li.textContent = '콜라';
+
+        //  $drink.appendChild($li);
+        // 동적으로 html 요소를 생성하고 문서에 추가함
+    </script>
+
+
+</body>
+</html>
+
+// 2번
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <u1 id="food">
+        <li>파스타</li>
+        <li>피자</li>
+    </u1>
+
+    <script>
+        const $food = document.getElementById('food');
+
+        $food.removeChild($food.lastElementChild);
+    
+    </script>
+</body>
+</html>
