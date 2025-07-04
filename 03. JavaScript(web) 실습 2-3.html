@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>실습문제 2-3</title>
+</head>
+<body>
+    <h3>버튼을 클릭하면, 첫 번째 체크박스의 항목을 체크해주세요</h3>
+    <br>
+    <input type="checkbox" id="java" value="Java">
+    <label for="java">Java</label><br>
+
+    <input type="checkbox" id="dataBase" value="DataBase">
+    <label for="dataBase">DataBase</label><br>
+
+    <input type="checkbox" id="web" value="Web">
+    <label for="web">Web</label><br>
+
+    <button id="btn">클릭</button>
+
+    <script>
+        const $webCheckbox = document.getElementById('web');
+        const $button =document.getElementById('btn');
+
+        $button.onclick=()=> {
+            $webCheckbox.checked = true;
+        };
+    </script>
+</body>
+</html>
