@@ -1,0 +1,51 @@
+// 화살표 함수 특징 
+
+// 1. this를 가지지 않음
+let theater = {
+    store : "건대점",
+    titles : ["어벤져스", "겨울왕국", "스파이더맨", "라이온킹", "알라딘"],
+
+    showMovieList() {
+        this.titles.forEach(
+            title => console.log(this.store + ":" + title)
+        );
+    }
+}
+theater.showMovieList();
+
+// 2. new 키워드와 함께 호출할 수 없음
+const arrowFunc = ()=> {};
+new arrowFunc(); // <- 에러 발생
+
+// 3. super를 가지지 않음
+lass Animal {
+
+    constructor(name, weight) {
+        this.name =name;
+        this.weight=weight
+    }
+
+    move(lostweight) {
+        if(this.weight > lostweight)
+            this.weight -= lostweight;
+        console.log(`${this.name}(은)는 움직임으로 인해 ${lostweight}kg 감량되어 ${this.weight}kg이 되었습니다.`);
+    }
+}
+
+class Tiger extends Animal {
+
+    move(lostweight) {
+        // 화살표함수자체에서 super를 참조하는게 아니고 부모쪽에 있는것을
+        // 참조하는것이기때문에 move() 호출이 가능하다.
+        setTimeout(()=> super.move(lostweight), 2000);
+        // 일반 함수를 하면 에러발생 super를 못 찾음
+        setTimeout(function(){
+            super.move(lostweight)
+        },2000); 
+        
+        console.log('먹이를 찾고 있다.');
+    }
+}
+
+let tiger = new Tiger ('호랑이', 90);
+tiger.move(1);
