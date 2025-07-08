@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background:#A3DCFF ;
+            margin: 0;
+        }
+        header {
+            font-size: 96px;
+            font-weight: 700;
+            color: #826767;
+            height: 200px;
+            width: 100%;
+            padding-inline-start: 5% ;
+        }
+        #nav {
+            height:50px;
+            text-align: center;
+            font-size: 30px;
+            float: right;
+            margin-top: -75px;
+        }
+        span {
+            color : #c3c3c3;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: space-around;
+            background: #002bff;
+            color: white;
+            font-weight: bold;
+            padding: 10px 0;
+        }
+        .card-container {
+            display: flex;
+            justify-content: space-around;
+            padding: 50px;
+            gap: 10px;
+            /* flex-wrap: wrap; */
+        }
+        .card {
+            width: 360px;
+            background-color: white;
+        }
+        .card .image-box {
+            width: 360px;
+            height: 420px;
+            display: flex;
+
+
+        }
+        .card .info {
+            padding: 10px;
+            font-size: 15px;
+        }
+        .btn {
+            width:100px;
+            height:50px;
+            background: #5D5D5D;
+            color: white;
+
+        }
+
+    </style>
+</head>
+<body>
+    <header>SportsTix</header>
+    <nav>
+        <div id="nav"> 장바구니 <span>|</span> 마이페이지 <span>|</span> 로그인 </div>
+    </nav>
+    <div class="tabs">
+        <div class="tab1">야구</div>
+        <div class="tab2">농구</div>
+        <div class="tab3">축구</div>
+        <div class="tab4">기타</div>
+    </div>
+    <div class="card-container">
+
+        <div class="card">
+            <div class="image-box">이미지</div>
+            <div class="info">
+                <strong>Seoul vs Busan</strong><br>
+                Baseball Game<br>
+                2025.07.14<br>
+                6:30 PM<br>
+                잠실 경기장
+            </div>
+            <button class="btn">예매</button>
+        </div>
+        <div class="card">
+            <div class="image-box">이미지</div>
+            <div class="info">
+                <strong>Seoul vs Busan</strong><br>
+                Baseball Game<br>
+                2025.07.14<br>
+                6:00 PM<br>
+                잠실 경기장
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-box">이미지</div>
+            <div class="info">
+                <strong>Seoul vs Busan</strong><br>
+                Baseball Game<br>
+                2025.07.14<br>
+                6:00 PM<br>
+                잠실 경기장
+            </div>
+        </div>
+        <div class="card">
+            <div class="image-box">이미지</div>
+            <div class="info">
+                <strong>Seoul vs Busan</strong><br>
+                Baseball Game<br>
+                2025.07.14<br>
+                6:00 PM<br>
+                잠실 경기장
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
